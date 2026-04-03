@@ -1,0 +1,83 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+/* ============================================
+   株式会社HAI — Design System（レポート／ワイヤーフレーム準拠）
+   Breathing Space: セクション間 160px = --spacing-section-gap
+   ============================================ */
+@theme {
+  /* Palette */
+  --color-gallery-white: #ffffff;
+  --color-platinum-gray: #f5f7f8;
+  --color-obsidian-black: #111111;
+  --color-steel-gray: #666666;
+  --color-trust-navy: #0a2540;
+  --color-minimal-line: #eaeaea;
+  --color-warm-amber: #c8956c;
+
+  /* Spacing — section vertical rhythm（各セクションの py-section-gap = 上下 160px） */
+  --spacing-section-gap: 160px;
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 40px;
+  --spacing-xl: 64px;
+  --spacing-2xl: 100px;
+  --spacing-3xl: 140px;
+
+  /* Layout */
+  --max-width-content: 1280px;
+
+  /* Typography — レポート 4-3 + 読みやすさ・余裕ある行間 */
+  --text-hero: clamp(3rem, 5vw, 5.5rem);
+  --text-hero--line-height: 1.12;
+  --text-section-title: clamp(2rem, 3.5vw, 3.5rem);
+  --text-section-title--line-height: 1.38;
+  --text-subsection: clamp(1.25rem, 2vw, 1.75rem);
+  --text-subsection--line-height: 1.48;
+  --text-body: 1rem;
+  --text-body--line-height: 2.05;
+  --text-caption: 0.8125rem;
+  --text-caption--line-height: 1.85;
+  --text-label: 0.6875rem;
+  --text-label--line-height: 1.15;
+
+  /* Noto Sans JP を主軸（layout で variable 注入） */
+  --font-sans: var(--font-noto-serif-jp), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-en: var(--font-sans);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-gallery-white text-obsidian-black antialiased;
+  }
+}
+
+/* 英字ラベル（レポート: Helvetica 系） */
+@layer utilities {
+  .font-en {
+    font-family: var(--font-en);
+  }
+}
+
+/* ボタン・クリック可能要素の滑らかな手触り */
+@layer components {
+  .btn-premium {
+    @apply transform-gpu rounded-sm transition-[transform,box-shadow,background-color,border-color,color,opacity] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)];
+  }
+  .btn-premium:hover {
+    @apply -translate-y-0.5;
+  }
+  .btn-premium:active {
+    @apply translate-y-0 scale-[0.99];
+  }
+  .card-premium {
+    @apply transform-gpu transition-[transform,box-shadow] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)];
+  }
+  .card-premium:hover {
+    @apply -translate-y-1 shadow-xl shadow-black/15;
+  }
+}
