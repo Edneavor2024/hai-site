@@ -56,6 +56,13 @@
   }
 }
 
+/* <details>/<summary> のデフォルトマーカーを隠す（スマホヘッダーの見た目崩れ防止） */
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
 /* 英字ラベル（レポート: Helvetica 系） */
 @layer utilities {
   .font-en {
