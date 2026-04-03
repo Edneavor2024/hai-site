@@ -1,0 +1,29 @@
+[
+  {
+    "name": "トヨタ ランドクルーザー７０ ＺＸ",
+    "price": "¥5,480,000",
+    "spec": "1999年 / 15.6万km / ブラック",
+    "cat": "SUV",
+    "href": "https://www.goo-net.com/usedcar_shop/0901504/detail.html",
+    "image": "/rankuru.jpg",
+    "alt": "トヨタ ランドクルーザー７０ ＺＸ（画像）"
+  },
+  {
+    "name": "スズキ ジムニー ランドベンチャー",
+    "price": "¥980,000",
+    "spec": "2005年 / 11.2万km / パール",
+    "cat": "SUV",
+    "href": "https://www.goo-net.com/usedcar_shop/0901504/detail.html",
+    "image": "/jimny.jpg",
+    "alt": "スズキ ジムニー ランドベンチャー（画像）"
+  },
+  {
+    "name": "ダイハツ ハイゼットカーゴ ＤＸ（Cursor仕様）",
+    "price": "¥550,000",
+    "spec": "2013年 / 8.9万km / ホワイト",
+    "cat": "Compact",
+    "href": "https://www.goo-net.com/usedcar_shop/0901504/detail.html",
+    "image": "/hijet.jpg",
+    "alt": "ダイハツ ハイゼットカーゴ ＤＸ（画像）"
+  }
+]
